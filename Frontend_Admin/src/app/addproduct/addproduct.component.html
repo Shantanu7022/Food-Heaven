@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <app-header></app-header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <app-sidebar></app-sidebar>
+    <!-- End Sidebar-->
+
+
+    <main id="main" class="main">
+      <div class="pagetitle" style="width: 80%; margin-left: 100px">
+        <!-- Vertical Form -->
+
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title">Add Product</h1>
+
+            <!-- General Form Elements -->
+            <form #frm="ngForm" method="post" (ngSubmit)="addp(frm.value)">
+              <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Category Name</label>
+                <div class="col-sm-10">
+                  <select
+                    class="form-select" name="category"
+                    aria-label="Default select example" [ngModel]
+                  >
+                    <option selected>Select Category</option>
+                    <option *ngFor="let c of allcat" value="{{c._id}}">{{c.categoryname}}</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="inputText" class="col-sm-2 col-form-label"
+                  >Product Name</label
+                >
+                <div class="col-sm-10">
+                  <input type="text" name="pname" class="form-control" [ngModel]/>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label"
+                  >Product Price</label
+                >
+                <div class="col-sm-10">
+                  <input type="number" name="pprice" class="form-control" [ngModel]/>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label"
+                  >Product Image</label
+                >
+                <div class="col-sm-10">
+                  <input class="form-control" type="file" id="formFile" (change)="fup($event)" />
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label"
+                  >Details</label
+                >
+                <div class="col-sm-10">
+                  <ckeditor data="" name="pd" [ngModel]></ckeditor>
+                </div>
+              </div>
+
+              <div class="col-sm-10">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="margin-left: 50%"
+                >
+                  Add Product
+                </button>
+              </div>
+              
+            </form>
+            <!-- End General Form Elements -->
+          </div>
+        </div>
+
+        <!-- Vertical Form -->
+      </div>
+      <!-- End Page Title -->
+    </main>
+    <!-- End #main -->
+
+
+    <!-- ======= Footer ======= -->
+    <app-footer></app-footer>
+    <!-- End Footer -->
+  </body>
+</html>

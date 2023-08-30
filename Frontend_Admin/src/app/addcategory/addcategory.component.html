@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <app-header></app-header>
+ <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <app-sidebar></app-sidebar>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main" style="height: 100vh;">
+
+    <div class="pagetitle" style="width: 500px; margin-left: 300px;">
+      <!-- Vertical Form -->
+  
+      <div class="card">
+        <div class="card-body" style="align-items: center;">
+          <h1 class="card-title">Add Category</h1>
+          <h3>{{cat}}</h3>
+
+          <form class="row g-3" #frm ="ngForm" (ngSubmit)="addcat(frm.value)">
+            <div class="col-12">
+              
+              <input type="text" class="form-control" id="inputNanme4" placeholder="Enter your category name" name="name" [ngModel]/>
+            </div>
+           
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+           
+            </div>
+          </form>
+
+        </div>
+      </div>
+    
+       <!-- Vertical Form -->
+    </div>
+    <!-- End Page Title -->
+
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <app-footer></app-footer>
+<!-- End Footer -->
+
+</body>
+
+</html>

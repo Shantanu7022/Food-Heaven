@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <app-header></app-header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <app-sidebar></app-sidebar>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main" style="height: 100vh">
+      <div class="pagetitle">
+        <div class="card">
+          <div class="card-body" style="align-items: center">
+            <h1 class="card-title">List Category</h1>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Category Name</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor = "let c of allcat">
+                 <td>{{c.categoryname}}</td>
+                 <td><a [routerLink]="'/edit-cat/' + c._id" class="btn btn-success">Edit</a></td>
+                 <td><button (click)="delc(c._id)" class="btn btn-danger">Delete</button></td>
+                 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Title -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <app-footer></app-footer>
+    <!-- End Footer -->
+  </body>
+</html>
