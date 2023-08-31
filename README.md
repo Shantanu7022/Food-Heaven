@@ -1,7 +1,7 @@
 # Food-Heaven
 I developed this Online Food Ordering Website called "Taste Heaven" using MEAN Stack
 
-# Customer
+# Customer Site
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
@@ -31,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-# Frontend
+# Admin_Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
