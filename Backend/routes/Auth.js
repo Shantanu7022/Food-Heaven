@@ -1,8 +1,12 @@
+require('dotenv').config();
 const exp = require("express");
 const router = exp.Router();
 const bcrypt = require("bcrypt");
 const Admin=require("../model/Admin_db");
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
+
+
+
 router.get("/reg",async(req,res)=>{
     var name="Shantanu";
     var email = "sg@gmail.com";
@@ -40,7 +44,7 @@ router.post("/login",async (req,res)=>{
                      aname:ldata.name
                  };
  
-                 var jtoken=jwt.sign(udata,"foodkey");
+                 var jtoken=jwt.sign(udata, process.env.SECRET_KEY);
  
  
                  res.json({token:jtoken})

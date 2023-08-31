@@ -1,3 +1,4 @@
+require('dotenv').config();
 const exp = require("express")  
 const app = exp();  //Convert into a App
 app.use(exp.static('public'))
