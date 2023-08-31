@@ -1,4 +1,4 @@
-# Taste-Heaven
+# Food-Heaven
 I developed this Online Food Ordering Website called "Taste Heaven" using MEAN Stack
 
 # Customer
