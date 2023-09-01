@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
-
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ export class LoginComponent {
 
   iserror:any=false;
 
-  constructor(private api: ApiService){
+  constructor(private router: Router,private api: ApiService){
 
   }
   loginc(val:any){
@@ -23,7 +23,11 @@ export class LoginComponent {
       console.log(data)
 
       if(data.msg == "Invalid Login"){
-        this.iserror=true;
+        this.iserror = true;
+      }else{
+        localStorage.setItem("token",data.token);
+        this.router.navigate(['dashboard'])
+
       }
     })
   }
