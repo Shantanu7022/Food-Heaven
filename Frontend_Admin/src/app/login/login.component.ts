@@ -26,7 +26,7 @@ export class LoginComponent {
         this.iserror = true;
       }else{
         localStorage.setItem("token",data.token);
-        this.router.navigate(['dashboard'])
+        this.router.navigate(['/'])
 
       }
     })

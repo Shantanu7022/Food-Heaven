@@ -10,11 +10,11 @@ export class ApiService {
   constructor(private http:HttpClient) {}
 
   selpro(){
-    return this.http.get("http://localhost:2000/pro/sel");
+    return this.http.get("https://food-heaven-server.onrender.com/pro/sel");
   }
 
   selcat(){
-    return this.http.get("http://localhost:2000/cat/sel");
+    return this.http.get("https://food-heaven-server.onrender.com/cat/sel");
   }
 
 }

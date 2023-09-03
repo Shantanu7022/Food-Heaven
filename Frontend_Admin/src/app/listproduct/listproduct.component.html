@@ -41,7 +41,7 @@
                  <td>{{c.pname}}</td>
                  <td>{{c.pprice}}</td>
                  <td [innerHtml]="c.pd">{{c.pd}}</td>
-                 <td><img [src]="'http://localhost:2000/product_img/' + c.pimg" style="width: 90px; height: 60px; border-radius: 50%;"></td>
+                 <td><img [src]="'https://food-heaven-server.onrender.com/product_img/' + c.pimg" style="width: 90px; height: 60px; border-radius: 50%;"></td>
                  <td><a class="btn btn-success">Edit</a></td>
                  <td><button (click)="delp(c._id)" class="btn btn-danger">Delete</button></td>
                  

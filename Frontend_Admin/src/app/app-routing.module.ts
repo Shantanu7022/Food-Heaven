@@ -14,8 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { ProtectGuard } from './protect.guard';
 
 const routes: Routes = [
-  {path: "", redirectTo:"login", pathMatch:"full"},
-  {path: "dashboard", component:DashboardComponent},
+
+  {path: "", component:DashboardComponent},
   {path: "add-category", component:AddcategoryComponent, canActivate: [ProtectGuard]},
   {path: "list-category", component:ListcategoryComponent, canActivate: [ProtectGuard]},
   {path: "list-product", component:ListproductComponent, canActivate: [ProtectGuard]},
